@@ -27,5 +27,6 @@ public class item_48_avoid_float_and_double_if_exact_required {
         }
         System.out.println(itemsBought + " items bought.");
         System.out.println("Money left over: "+ funds1 + " cents");
+        System.out.println("Check out Floating Point - Computerphile on youtube for more info and examples");
     }
 }
