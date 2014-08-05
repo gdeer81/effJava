@@ -7,3 +7,5 @@ When adding code to this repo add your file to the appropriate chapter under src
 
 the file structure is src/ch#_<chapter title>/item#_<name>.java
 
+This repo is now integrated with slack.
+
