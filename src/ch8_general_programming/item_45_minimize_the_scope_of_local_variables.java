@@ -3,7 +3,7 @@
  * Date: 8/3/2014.
  */
 
-public class item45_minimize_the_scope_of_local_variables {
+public class item_45_minimize_the_scope_of_local_variables {
         private static String[] data = {"effictive", "java"};
     private static String[] data2 = {"effictive", "java"};
     public static void main(String[] args) {

@@ -7,7 +7,7 @@ import java.util.Random;
  * Time: 10:34 AM
  * To change this template use File | Settings | File Templates.
  */
-public class item47_know_and_use_libraries {
+public class item_47_know_and_use_libraries {
 
     private static final Random rnd = new Random();
 
