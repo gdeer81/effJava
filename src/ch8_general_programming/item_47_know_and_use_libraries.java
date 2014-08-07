@@ -1,3 +1,5 @@
+package ch8_general_programming;
+
 import java.util.Random;
 
 /**
