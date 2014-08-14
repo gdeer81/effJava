@@ -1,7 +1,7 @@
 package ch2_creating_and_destroying_objects.item2.builder_pattern;
 
 /**
- * Created by k557782 on 8/14/2014.
+ * Created by dkocian on 8/14/2014.
  */
 public class Main {
     public static void main(String[] args) {

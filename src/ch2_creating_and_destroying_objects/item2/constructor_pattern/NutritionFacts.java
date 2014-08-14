@@ -1,7 +1,7 @@
 package ch2_creating_and_destroying_objects.item2.constructor_pattern;
 
 /**
- * Created by k557782 on 8/14/2014.
+ * Created by dkocian on 8/14/2014.
  */
 public class NutritionFacts {
     private final int servingSize;  // (mL)            required
