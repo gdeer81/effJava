@@ -5,7 +5,7 @@ import java.util.EmptyStackException;
 
 /**
  * Created by g592334
- * Date: 8/20/2014.
+ * Date: 8/20/2014
  */
 
 public class item_11_override_clone_judiciously {
