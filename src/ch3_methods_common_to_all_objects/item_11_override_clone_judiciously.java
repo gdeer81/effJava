@@ -105,13 +105,14 @@ public class item_11_override_clone_judiciously {
         depend on the class of the object. The general intent is that, for any object x,
         the expression
         */
-        x.clone() != x;
+
+        //x.clone() != x;
         //will be true, and the expression
 
-        x.clone().getClass() == x.getClass();
+        //x.clone().getClass() == x.getClass();
         //will be true, but these are not absolute requirements. While it is typically the
         //case that
-        x.clone().equals(x);
+        //x.clone().equals(x);
         //will be true, this is not an absolute requirement. Copying an object will typi-
         //cally entail creating a new instance of its class, but it may require copying of
         //internal data structures as well. No constructors are called.
@@ -122,13 +123,13 @@ public class item_11_override_clone_judiciously {
     // this returns PhoneNumber, not Object and it is legal to do this.
     // It is now legal for an overriding method's return type to be a subclass of the overridden method's
     // return type.
-    @Override public PhoneNumber clone() {
+    /*@Override public PhoneNumber clone() {
         try {
             return (PhoneNumber) super.clone();
         } catch(CloneNotSupportedException e) {
             throw new AssertionError();  // Can't happen
         }
-    }
+    }*/
 
     public class Stack implements Cloneable {
         private Object[] elements;
@@ -168,8 +169,8 @@ public class item_11_override_clone_judiciously {
     }
 
     public class HashTable implements Cloneable {
-        private Entry[] buckets = ...;
-        private static class Entry {
+        private Entry[] buckets;
+        private class Entry {
             final Object key;
             Object value;
             Entry  next;
@@ -179,17 +180,16 @@ public class item_11_override_clone_judiciously {
                 this.next  = next;
             }
         }
-        ... // Remainder omitted
-}
 
-    // Broken - results in shared internal state!
-    @Override public HashTable clone() {
-        try {
-            HashTable result = (HashTable) super.clone();
-            result.buckets = buckets.clone();
-            return result;
-        } catch (CloneNotSupportedException e) {
-            throw new AssertionError();
+        // Broken - results in shared internal state!
+        @Override public HashTable clone() {
+            try {
+                HashTable result = (HashTable) super.clone();
+                result.buckets = buckets.clone();
+                return result;
+            } catch (CloneNotSupportedException e) {
+                throw new AssertionError();
+            }
         }
     }
 }
