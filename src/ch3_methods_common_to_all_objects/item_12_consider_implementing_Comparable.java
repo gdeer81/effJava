@@ -28,8 +28,8 @@ public class item_12_consider_implementing_Comparable {
 
         //Provisions of the compareTo contract:
         //1: If you reverse the direction of comparison between two object references, the expected thing happens:
-        // if x1 is < x2 then x2 must be > x1. if x1 == x2 then x2 == x1. if x1 > x2 then x2 < x1.
-        //2: if x1 > x2 and x2 > x3 then x1 > x3
+        // if x is < y then y must be > x. if x == y then y == x. if x > y then y < x.
+        //2: if x > y and y > z then x > z
         //3: All objects that compare as equal must yield same results when compared to any other object.
 
         //Like the equals contract, compareTo must impose reflexivity, symmetry and transitivity as mentioned above.

@@ -25,14 +25,12 @@ public class item_11_override_clone_judiciously {
         //you should return an object obtained by invoking super.clone. If they all obey this rule then super.clone
         //will eventually invoke Object's clone method, creating an instance of the right class.
 
-        //As of 1.5, the clone method returns the actual class and not just Object. It means it is now legal for an
-        //overriding method's return type to be a subclass of the overridden method's return type which allows the
-        //overriding method to provide more information about the returned object and eliminated the need for casting
-        //in the client. Because Object.clone returns Object, PhoneNumber.clone must cast the result of super.clone()
-        //before returning it which is preferable than requiring every caller of PhoneNumber.clone cast the result.
+        //-As of 1.5, the clone method returns the actual class and not just Object. Because Object.clone returns
+        // Object, PhoneNumber.clone must cast the result of super.clone()
+        // before returning it which is preferable than requiring every caller of PhoneNumber.clone cast the result.
         //***GENERAL PRINCIPLE at play here is never make the client do anything the library can do for the client.***
 
-        //The problem with the clone architecture is that its incompatible with normal use of final fields referring
+        //-The problem with the clone architecture is that its incompatible with normal use of final fields referring
         //to mutable objects, except in cases where the mutable objects may be safely shared between an object and
         //its clone. In order to make it cloneable, may be necessary to remove final modifiers from some fields.
 
