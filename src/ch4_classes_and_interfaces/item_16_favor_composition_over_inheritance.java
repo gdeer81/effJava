@@ -1,5 +1,11 @@
 package ch4_classes_and_interfaces;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
 /**
  * $Id$
  * <p/>
@@ -33,5 +39,25 @@ public class item_16_favor_composition_over_inheritance {
 	//Use the "is-a" test to determine whether you should implement the decorator pattern or use inheritance. If every
 	//B is not truly an A, then don't extend.
 
-	//TODO: show example using Properties?
+	public static void main(String [] args) {
+
+		Properties propertiesFail = new Properties();
+
+		System.out.println(propertiesFail.getProperty("test"));
+		System.out.println(propertiesFail.get("test"));
+		try(FileInputStream in = new FileInputStream("src/ch4_classes_and_interfaces/test.properties")) {
+			propertiesFail.load(in);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println(propertiesFail.getProperty("test"));
+		System.out.println(propertiesFail.get("test"));
+		List numbers = new ArrayList<Integer>();
+		numbers.add(42);
+		//Properties extends HashTable, but it is not a HashTable. It requires all of its keys to be strings in order for it
+		//to work, but since we have access to HashTable functions, we can break Properties by using a HashTable method.
+		propertiesFail.put("test", numbers);
+		System.out.println(propertiesFail.getProperty("test"));
+		System.out.println(propertiesFail.get("test"));
+	}
 }
