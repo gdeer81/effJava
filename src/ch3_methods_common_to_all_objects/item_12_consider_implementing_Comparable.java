@@ -83,38 +83,38 @@ public class item_12_consider_implementing_Comparable {
     }
 
     //NORMAL (BUT BAD) WAY
-    public int compareTo(PhoneNumber pn) {
-        // Compare area codes
-        if (areaCode < pn.areaCode)
-            return -1;
-        if (areaCode > pn.areaCode)
-            return  1;
-        // Area codes are equal, compare prefixes
-        if (prefix < pn.prefix)
-            return -1;
-        if (prefix > pn.prefix)
-            return  1;
-        // Area codes and prefixes are equal, compare line numbers
-        if (lineNumber < pn.lineNumber)
-            return -1;
-        if (lineNumber > pn.lineNumber)
-            return  1;
-        return 0; // All fields are equal
-    }
+//    public int compareTo(PhoneNumber pn) {
+//        // Compare area codes
+//        if (areaCode < pn.areaCode)
+//            return -1;
+//        if (areaCode > pn.areaCode)
+//            return  1;
+//        // Area codes are equal, compare prefixes
+//        if (prefix < pn.prefix)
+//            return -1;
+//        if (prefix > pn.prefix)
+//            return  1;
+//        // Area codes and prefixes are equal, compare line numbers
+//        if (lineNumber < pn.lineNumber)
+//            return -1;
+//        if (lineNumber > pn.lineNumber)
+//            return  1;
+//        return 0; // All fields are equal
+//    }
     //While this method works, it can be improved because it doesn't specify the magnitude of the return value, only the sign.
-
-    public int compareTo(PhoneNumber pn) {
-        // Compare area codes
-        int areaCodeDiff = areaCode - pn.areaCode;
-        if (areaCodeDiff != 0)
-            return areaCodeDiff;
-        // Area codes are equal, compare prefixes
-        int prefixDiff = prefix - pn.prefix;
-        if (prefixDiff != 0)
-            return prefixDiff;
-        // Area codes and prefixes are equal, compare line numbers
-        return lineNumber - pn.lineNumber;
-    }
+//
+//    public int compareTo(PhoneNumber pn) {
+//        // Compare area codes
+//        int areaCodeDiff = areaCode - pn.areaCode;
+//        if (areaCodeDiff != 0)
+//            return areaCodeDiff;
+//        // Area codes are equal, compare prefixes
+//        int prefixDiff = prefix - pn.prefix;
+//        if (prefixDiff != 0)
+//            return prefixDiff;
+//        // Area codes and prefixes are equal, compare line numbers
+//        return lineNumber - pn.lineNumber;
+//    }
 
     //This works but should be used with extreme caution. Only use this if you are certain that the difference between
     // the two are <= Integer.MAX_VALUE(2^31 - 1) because if the DIFFERENCE is bigger than that then it can overflow
