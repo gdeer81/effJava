@@ -45,7 +45,8 @@ public class Favor_Composition_Over_Inheritance {
 
 		System.out.println(propertiesFail.getProperty("test"));
 		System.out.println(propertiesFail.get("test"));
-		try(FileInputStream in = new FileInputStream("src/ch4_classes_and_interfaces/test.properties")) {
+		try {
+            FileInputStream in = new FileInputStream("src/ch4_classes_and_interfaces/test.properties");
 			propertiesFail.load(in);
 		} catch (IOException e) {
 			e.printStackTrace();

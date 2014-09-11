@@ -1,0 +1,13 @@
+rootProject.name = 'effjava'
+include 'Chapter 2'
+include 'Chapter 3'
+include 'Chapter 4'
+include 'Chapter 5'
+include 'Chapter 6'
+include 'Chapter 7'
+include 'Chapter 8'
+include 'Chapter 9'
+include 'Chapter 10'
+include 'Chapter 11'
+
+

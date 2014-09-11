@@ -4,7 +4,7 @@ public class BadUtilityClass{
    //the compiler is going to add a default no-arg constructor to this utility class
    //is that what we want?
    //what if we add it ourself?
-   BadUtilityClass(){
+   public BadUtilityClass(){
    System.out.println("Hey I didn't want you to actually create this class, this is just a bag of methods...I know I could have used a private constructor to prevent this, but I assumed you would read the javadocs before using classes in your code...");
    try{Thread.sleep(2000);}catch(Exception e){}
    System.out.println("RIP your console");

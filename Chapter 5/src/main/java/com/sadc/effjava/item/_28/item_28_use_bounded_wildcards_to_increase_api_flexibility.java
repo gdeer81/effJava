@@ -1,4 +1,4 @@
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.Union;
+package com.sadc.effjava.item._28;
 
 import java.util.ArrayList;
 import java.util.HashSet;

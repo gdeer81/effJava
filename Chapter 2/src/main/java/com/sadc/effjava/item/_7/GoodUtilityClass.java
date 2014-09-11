@@ -1,7 +1,7 @@
 package com.sadc.effjava.item._7;
 
 public class GoodUtilityClass{
-   GoodUtilityClass(){
+   public GoodUtilityClass(){
      throw new AssertionError();
        }
    public static int randomNumber(){

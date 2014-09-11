@@ -1,6 +1,9 @@
 package com.sadc.effjava.item._4;//package ch2_creating_and_destroying_objects;
 
 
+import com.sadc.effjava.item._7.BadUtilityClass;
+import com.sadc.effjava.item._7.GoodUtilityClass;
+
 public class Enforce_Noninstantiability_With_A_Private_Constructor {
 
 public static void main(String[] args){
