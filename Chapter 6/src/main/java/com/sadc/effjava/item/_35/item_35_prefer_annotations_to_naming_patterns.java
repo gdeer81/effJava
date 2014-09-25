@@ -1,14 +1,20 @@
 //package com.sadc.effjava.item._35;
 
 public class item_35_prefer_annotations_to_naming_patterns{
-   @Test public static void m1() { }  // Test should pass
+
+ @Test public static void m1() { }  // Test should pass
+
     public static void m2() { }
-    @Test public static void m3() {    // Test should fail
+
+@Test public static void m3() {    // Test should fail
         throw new RuntimeException("Boom");
     }
     public static void m4() { }
+
     @Test public void m5() { } // INVALID USE: nonstatic method
+
     public static void m6() { }
+
     @Test public static void m7() {    // Test should fail
         throw new RuntimeException("Crash");
     }
