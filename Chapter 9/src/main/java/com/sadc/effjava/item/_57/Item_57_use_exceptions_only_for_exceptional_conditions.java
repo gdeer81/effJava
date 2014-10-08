@@ -25,7 +25,7 @@ public class Item_57_use_exceptions_only_for_exceptional_conditions {
 
         //In presence of unrelated bug, the loop can fail silently and mask the bug making it much more difficult to
         //debug the issue
-        //Also, if a loop idiom were used, the bug could generate an uncaught exception resulting in immdediate thread
+        //Also, if a loop idiom were used, the bug could generate an uncaught exception resulting in immediate thread
         //termination and /or misinterpreted as normal loop termination
 
 
